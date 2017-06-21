@@ -29,11 +29,7 @@ def hash_iterative(s, n, k):
 				count += 1
 			if(count == k):
 				return np.array(Bk)
-<<<<<<< HEAD
-		i += 1
-=======
 		i += 1	
->>>>>>> 7b31735c2bd088e957c08b88cecb47c9f924400f
 
 def KeyGen(**kwargs):
 	'''
