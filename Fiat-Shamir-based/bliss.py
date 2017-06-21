@@ -2,19 +2,12 @@ from sage.all import *
 from sage.stats.distributions.discrete_gaussian_lattice import DiscreteGaussianDistributionLatticeSampler
 import hashlib
 import random
-<<<<<<< HEAD
-=======
 
->>>>>>> 7b31735c2bd088e957c08b88cecb47c9f924400f
 # security parameters
 n = 256
 m = 1000
 q = 7681
-<<<<<<< HEAD
 sd = 200
-=======
-sd = 300
->>>>>>> 7b31735c2bd088e957c08b88cecb47c9f924400f
 eta = 1.1
 alpha = 1
 k = 12
@@ -55,15 +48,11 @@ def Sign(msg, A, S):
         c = H(Ay, msg)
         b = choice([0, 1])
         Sc = S.change_ring(ZZ)*c
-<<<<<<< HEAD
         z = y + (-1)**b*Sc       
         exp_term = exp(float(Sc.norm()**2)/(2*sd**2))
         cosh_term = cosh(float(z*Sc)/sd**2)       
         prob = exp_term/(M*cosh_term)
-=======
         z = y + (-1)**b*Sc
-        prob =exp(float(Sc.norm()**2)/2*sd**2)/(M*math.cosh(z*Sc/sd**2))
->>>>>>> 7b31735c2bd088e957c08b88cecb47c9f924400f
         if random.random() < prob:
             return (z, c)
 
