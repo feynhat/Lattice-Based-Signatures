@@ -6,7 +6,7 @@ import random
 n = 256
 m = 1000
 q = 7681
-sd = 300
+sd = 200
 eta = 1.1
 alpha = 1
 k = 12
